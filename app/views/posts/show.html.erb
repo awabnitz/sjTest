@@ -1,0 +1,84 @@
+<div id="bottomPostSect" xmlns="http://www.w3.org/1999/html">
+  <div id="tagCloud">
+    <a class="viewAll" href="<%= root_url%>"><img src="<%= root_url%>images/homeIcon2.png" width="40" height="40" alt="Home" /></a>
+    <div style="float:left;" id="tags">
+      <% @tags.each do |tag| %>
+
+              <%= link_to tag.name, category_path(tag), :id => tag.id%>
+
+      <% end %>
+    </div>
+  </div>
+  <div id="singlePost">
+    <div class="postDate">
+      <%= @post.created_at.strftime("%m . %d . %Y") %>
+    </div>
+    <div class="postTitle">
+      <%= @post.title %>
+    </div>
+    <div class="authorBar">
+      <div class="postAuthor">
+        Author:&nbsp;<%= link_to @post.author.name, @post.author %>
+      </div>
+      <div class="sharePost">
+        <div class="facebook">
+          <%= link_to image_tag("http://localhost:3000/images/facebookPost.gif", :border=>0), [@text_facebook, @encoded_url, "&t=", @sub_title].join(""), :target => "_blank", :method => @post.facebook_count %>
+
+          <span><%= @post.facebook %></span>
+        </div>
+        <div class="twitter">
+          <a href="https://twitter.com/intent/tweet?source=webclient&text=<%= @encoded_url %>" target="_blank"><img src="<%= root_url%>images/twitterPost.gif" width="23" height="23" alt="twitter"/></a>
+          <span><%= @post.twitter %></span>
+        </div>
+      </div>
+    </div>
+    <div class="postContent">
+      <% if @post.subhead.blank? %>
+      <% else %>
+      <h2><%= @post.subhead %></h2>
+      <% end %>
+      <% if @post.content.blank? %>
+      <% else %>
+      <div class="copy"><%= @post.content %></div>
+      <% end %>
+      <% if @post.video_url.blank?  %>
+      <% else %>
+          <div class="video">
+            <iframe src="http://player.vimeo.com/video/<%= @vimeo %>?title=0&amp;byline=0&amp;portrait=0&amp;color=ffb303" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+            </iframe>
+          </div>
+      <% end %>
+      <ul id="list">
+
+      <% @contents.each do |content| %>
+            <% if content.paragraph.blank? %>
+
+                <li class="copy"  id="<%= content.order_id %>"><%= image_tag content.image.url %></li>
+                <% else %>
+                <li class="copy" id="<%= content.order_id %>"><%= content.paragraph %></li>
+            <% end %>
+          <% end %>
+
+      </ul>
+
+
+
+
+    </div>
+  </div>
+  <div class="bottomLine">
+    <img src="<%= root_url%>images/bottomLine.jpg" width="940" height="8" />
+  </div>
+  <div id="pagination">
+    <div id="page">
+      <%= link_to("Previous Post", @post.previous_post) if @post.previous_post %>
+
+    </div>
+    <div id="archive">
+      <%= link_to("Next Post", @post.next_post) if @post.next_post %>
+    </div>
+  </div>
+  <div class="bottomLine">
+    <img src="<%= root_url%>images/bottomLine.jpg" width="940" height="8" />
+  </div>
+</div>

@@ -1,0 +1,388 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #0C0000;
+  margin: -20px 0 0;
+  padding: 0;
+}
+#container {
+  background-image: url("/images/bgImg.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 632px;
+}
+#content {
+  max-width:940px;
+  width:100%;
+  margin:0 auto;
+}
+#topNav {
+  float:left;
+  margin-top:30px;
+  width: 100%;
+}
+#topNav a {
+  color:#f6a20e;
+  font-family:arial;
+  text-decoration:none;
+  margin-right:15px;
+  font-size:12px;
+}
+#header {
+  background-image: url("/images/headerBg.png");
+  float: left;
+  height: 152px;
+  width: 941px;
+}
+#title {
+  background-image: url("/images/sjTitle.png");
+  height: 20px;
+  margin-top: 110px;
+  text-indent: -10000px;
+  width: 160px;
+  float:left;
+}
+#logo {
+  background-image: url("/images/sjb.png");
+  float: right;
+  height: 34px;
+  margin-right: 65px;
+  margin-top: 100px;
+  text-indent: -10000px;
+  width: 122px;
+}
+#featPost {
+
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  float: left;
+  height: 465px;
+  margin-top: 40px;
+  max-width: 960px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+#featPost .date {
+  color: #FFFFFF;
+  float: left;
+  font-family: arial;
+  margin-bottom: 60px;
+  width: 100%;
+}
+#featPost .postTitle {
+  float: left;
+  font-family: arial;
+  font-size: 41px;
+  margin-bottom: 60px;
+  margin-right: 400px;
+  width: 540px;
+}
+#featPost .postTitle a {
+  text-decoration:none;
+  color: #F6A20E;
+  text-transform: uppercase;
+}
+#featPost .postAuthor {
+  font-family:arial;
+  color:#ffffff;
+}
+
+#featPost .postAuthor a, #featPost .postTags a, #featPost .postVideo a,  #featPost .postComments span {
+  text-decoration:none;
+  color:#f6a20e;
+}
+#featPost .postTags {
+  color:#ffffff;
+  font-family:arial;
+}
+#featPost .postTags span {
+  margin: 0 5px;
+}
+#featPost .margin-left {
+  float: left;
+  height: 116px;
+  margin: 30px 0 0 30px;
+  width: 200px;
+}
+#featPost .postVideo, #featPost .postComments {
+  font-family:arial;
+  color:#ffffff;
+  margin-top:25px;
+}
+#featPost .postCircle {
+  float: left;
+  margin-left: 825px;
+  position: absolute;
+  top: 637px;
+  width: 100px;
+}
+#featPost .bottomLine {
+  float: left;
+  position: absolute;
+  top: 755px;
+}
+#bottomPostSect {
+  float: left;
+  width: 100%;
+  margin-top: 85px;
+}
+#bottomPostSect #tagCloud, #tags {
+  float: left;
+  width: 278px;
+}
+#bottomPostSect #tagCloud a {
+  background-color: #271202;
+  border-radius: 5px 5px 5px 5px;
+  color: #F6A20E;
+  float: left;
+  font-family: arial;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+#bottomPostSect #tagCloud a.viewAll {
+  background-color: transparent;
+  margin-top: 0;
+  padding: 0;
+
+}
+#bottomPostSect #postSect {
+  float:left;
+  max-width:660px;
+  margin-top:10px;
+}
+#bottomPostSect .postDate {
+  color: #FFFFFF;
+  float: left;
+  font-family: arial;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#bottomPostSect .contentSect {
+  float: left;
+  height: 210px;
+  padding: 10px;
+  position: relative;
+  top: -212px;
+  width: 300px;
+}
+#bottomPostSect .yellowBar {
+  background-color: #F6A20E;
+  height: 10px;
+  margin-top: 7px;
+  width: 290px;
+}
+#bottomPostSect  .postTitle a{
+  color: #FFFFFF;
+  font-family: arial;
+  font-size: 24px;
+  margin-top: 10px;
+  text-decoration: none;
+  width: 185px;
+  float:left;
+  height: 200px;
+  text-transform: uppercase;
+}
+#bottomPostSect .yellowCircle {
+  float: left;
+  height: 60px;
+  left: 46px;
+  position: relative;
+  top: 113px;
+  width: 60px;
+}
+#bottomPostSect .post {
+  float: left;
+  margin-bottom: 35px;
+  margin-left: 20px;
+  width: 310px;
+  height: 230px;
+}
+#pagination {
+  float: left;
+  margin: 20px 0 15px;
+  width:100%;
+}
+#pagination #page {
+  float:left;
+  margin-top:5px;
+}
+#pagination #page a, #archive  a {
+  color: #F6A20E;
+  font-family: arial;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.active {
+  color:#fff;
+}
+#pagination #archive {
+  float:right;
+}
+#footer {
+  background-color: #FBA919;
+  float: left;
+  height: 150px;
+  margin-top: 35px;
+  width: 100%;
+}
+#leftFoot {
+  float: left;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+#leftFoot img {
+}
+#leftFoot p{
+  color: #FFFFFF;
+  font-family: arial;
+  font-size: 12px;
+  margin: 5px 0 0 7px;
+  padding: 0;
+}
+#rightFoot {
+  float: right;
+  margin-right: 50px;
+  margin-top: 65px;
+}
+.previous_page {display:none;}
+.next_page {display:none;}
+.pagination .current {color:#ffffff;font-style:normal;margin-right: 10px;}
+#bottomPostSect #tagCloud #tags a:hover,#bottomPostSect #tagCloud #tags a.active  {
+  background-color: #F6A20E;
+  border-radius: 5px 5px 5px 5px;
+  color: #271202;
+  float: left;
+  font-family: arial;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  text-decoration: none;
+}
+#post #bottomPostSect {
+  margin-top:25px;
+}
+#post #singlePost {
+  float: left;
+  margin-left: 65px;
+  width: 660px;
+}
+#singlePost .postTitle {
+  color: #F6A20E;
+  font-family: arial;
+  font-size: 31px;
+  width: 405px;
+  text-transform: uppercase;
+}
+#singlePost .postAuthor {
+  color: #FFFFFF;
+  float: left;
+  font-family: arial;
+}
+#singlePost .authorBar {
+  float: left;
+  margin-top: 20px;
+  width: 660px;
+}
+#singlePost .sharePost {
+  float:right;
+}
+.sharePost .facebook {
+  float:left;
+}
+.sharePost span {
+  color: #F6A20E;
+  float: left;
+  font-family: arial;
+  font-size: 12px;
+  margin: 5px 10px 0;
+}
+.sharePost img {
+  float:left;
+}
+.sharePost .twitter {
+  float:left;
+}
+#singlePost .postContent {
+  float:left;
+}
+#singlePost h2 {
+  font-family:arial;
+  color:#ffffff;
+  font-size:16px;
+  margin:0;
+  padding:0;
+  margin-top:20px;
+  text-transform: uppercase;
+}
+#singlePost .postContent .copy {
+  color: #FFFFFF;
+
+  font-family: arial;
+  font-size: 14px;
+  margin-top: 20px;
+}
+#singlePost .postContent .copy a{
+  color: #F6A20E;
+  text-decoration:none;
+}
+.postContent .largePhoto, .postContent .video {
+  background-color: #402505;
+  float: left;
+  margin-top: 25px;
+  padding: 10px 10px 5px;
+}
+.postContent .caption{
+  color: #888888;
+  float: left;
+  font-family: arial;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 10px;
+}
+.postContent .smallPhotoSect {
+  float: left;
+  margin-top: 25px;
+}
+.postContent .smallPhotoSect .smallPhoto{
+  background-color: #402505;
+  float: left;
+  padding: 10px;
+}
+.postContent .smallPhotoSect .secondPhoto {
+  margin-left: 20px;
+}
+#singlePost {
+  float: left;
+  width: 660px;
+  margin-top: -45px;
+}
+#singlePost .postAuthor a {
+  color: #F6A20E;
+  text-decoration: none;
+}
+.postContent ul {
+  float:left;
+  padding: 0;
+  margin-top: 5px;
+}
+li.copy {
+  margin-top: 10px;
+  margin-bottom:10px;
+  list-style:none;
+
+  width:100%;
+}
+li img {
+  background-color: #402505;
+  float: left;
+
+  margin-bottom: 20px;
+  margin-right: 21px;
+
+  padding: 10px 10px 10px;
+}

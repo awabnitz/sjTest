@@ -1,0 +1,52 @@
+<div id="bottomPostSect">
+  <div id="tagCloud">
+    <a class="viewAll" href="<%= root_url%>"><img src="<%= root_url%>images/homeIcon2.png" width="40" height="40" alt="Home" /></a>   <br/>
+    <div style="float:left;" id="tags">
+      <% @tags.each do |tag| %>
+          <%= link_to tag.name, category_path(tag) %>
+      <% end %>
+    </div>
+  </div>
+  <div id="postSect">
+       <div style="color:#F6A20E;font-family:arial;font-size: 24px; margin-left: 20px;margin-top: -60px;"><span style="color:#fff;">Author:</span>&nbsp;<%= @author_name %> </div>
+        <% @posts.sort_by{|t| - t.created_at.to_i}.each do   |post| %>
+            <div class="post">
+              <div class="postDate">
+                <%= post.created_at.strftime("%m . %d . %Y") %>
+              </div>
+              <div><%= image_tag post.avatar.url(:medium) %></div>
+              <div class="contentSect">
+                <div class="yellowBar"></div>
+                <div class="postTitle">
+                  <%= link_to post.title, post %>
+                </div>
+                <div class="yellowCircle">
+                  <%= link_to image_tag("http://localhost:3000/images/smallCircle.png", :border=>0), post %>
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+
+
+    <%#=  link_to "Edit", edit_post_path(post) %>
+
+
+<%#=  link_to "Add a New Post", new_post_path %>
+
+  </div>
+  <div class="bottomLine">
+    <img src="<%= root_url%>images/bottomLine.jpg" width="940" height="8" />
+  </div>
+  <div id="pagination">
+    <div id="page">
+      <%= will_paginate @posts %>
+    </div>
+    <div id="archive">
+      <a href=""><img src="<%= root_url%>images/archive.jpg" width="98" height="26" alt="archive" /></a>
+    </div>
+  </div>
+  <div class="bottomLine">
+    <img src="<%= root_url%>images/bottomLine.jpg" width="940" height="8" />
+  </div>
+</div>
